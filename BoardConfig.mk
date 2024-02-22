@@ -1,0 +1,27 @@
+DEVICE_PATH := device/Schok/msm8937
+ALLOW_MISSING_DEPENDENCIES := tru7e
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_VARIANT := generic
+TARGET_OTA_ASSERT_DEVICE := msm8937
+BOARD_HAS_LARGE_FILESYSTEM := true
+BOARD_SYSTEMIMAGE_PARTITION_TYPE := ex4
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 androidboot.hardware=qcom androidboot.memcg=true user_debug=30 msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlycon=msm_hsl_uart,0x78B0000 vmalloc=300M androidboot.usbconfigfs=true cgroup.memory=nokmem,nosocket loop.max_part=7 buildvariant=userdebug
+TARGET_PREBUILT_KERNEL := 	$(DEVICE_PATH)/prebuilt/dtb
+BOARD_KERNEL_BASE := 0x80000000
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_RAMDISK_OFFSET := 0x01000000
+BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+BOARD_FLASH_BLOCK_SIZE := 131072
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
+BOARD_MKBOOTIMG_ARGS := --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
+TARGET_BOARD_PLATFORM := msm8937
+PLATFORM_SECURITY_PATCH := 2099-12-31
+PLATFORM_VERSION := 16.1.0
+TW_THEME := portrait_hdpi
+TW_SCREEN_BLANK_ON_BOOT := true

@@ -1,0 +1,2 @@
+add_lunch_combo omni_msm8937-userdebug
+add_lunch_combo omni_msm8937-eng
